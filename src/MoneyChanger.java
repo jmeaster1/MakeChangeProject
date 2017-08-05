@@ -17,11 +17,13 @@ public class MoneyChanger {
 		int change = (int) changeDue * 100;// converts the total change due into cents and casts into an int because I
 											// want the number of whole dollar bills (ex: 5, not 5.12)
 
-		int numOnes = change / 100;
-		change = change * 100;
+		int numOnes = change / 100;//determines how many dollar bills
+		change = change % 100;
 
-		int numQuarters = change / 25;
-		change = change * 25;
+		int numQuarters = change / 25;//determines how many quarters
+		change = change % 25;
+		
+		int num
 
 		if (itemCost > amtTend) {
 			System.out.println("You don't have enough money to purchase this item ");// message displays if user
