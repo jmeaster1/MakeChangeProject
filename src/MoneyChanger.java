@@ -15,7 +15,7 @@ public class MoneyChanger {
 
 		double changeDue = (amtTend - itemCost);// calculates total change due
 
-		int change = (int) (changeDue * 100);// converts the total change due into cents and casts into an int because I
+		int change = (int) ((amtTend*100) - (100*itemCost));// converts the total change due into cents and casts into an int because I
 												// want the number of whole dollar bills (ex: 5, not 5.12)
 		
 		int numHundreds = change / 10000;// determines how many 50 dollar bills
