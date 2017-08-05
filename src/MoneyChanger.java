@@ -4,8 +4,12 @@ public class MoneyChanger {
 
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);// Scanner created to receive user input
+		makeChange();
+	}
 
+	public static void makeChange() {
 		double itemCost, amtTend;
+		Scanner keyboard = new Scanner(System.in);// Scanner created to receive user input
 
 		System.out.println("What is the price of the item you would like to purchase?: ");// Prompts user for item cost
 		itemCost = keyboard.nextDouble();
@@ -16,7 +20,7 @@ public class MoneyChanger {
 		double changeDue = (amtTend - itemCost);// calculates total change due
 
 		int change = (int) ((amtTend * 100) - (100 * itemCost));// converts the total change due into cents and casts
-																// into an int because I  want the number 
+																// into an int because I want the number
 																// of whole dollar bills (ex: 5, not 5.12)
 
 		int numHundreds = change / 10000;// determines how many 50 dollar bills
@@ -108,9 +112,7 @@ public class MoneyChanger {
 
 			System.out.printf("You are due $ %.2f in change from this transaction.", changeDue);// limits decimal
 																								// precision to 2
-																								// decimal places
-		}
-
+		} 																						// decimal places
 	}
 
 }
